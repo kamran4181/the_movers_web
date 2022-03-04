@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    font-family: 'MuseoModerno', cursive;
+    color: black;
+}
+.brand_nm{
+   font-size: 24px;
+   margin-top: 8px;
+}
+.logo img{
+    width:55px; 
+    height: 45px;
+}
+ul{
+    float: right;
+    /* padding-top: 20px; */
+    display: flex;
+}
+.nav_bar li{
+    list-style: none;
+
+}
+/* ///////////// */
+.text-right{
+    text-align: right;
+}
+.btn-prim{
+    background-color:#044E82 !important;
+}
+.text-4{
+    font-size: 48px;
+}
+.hero-section{
+    background-image: url('../images/header-bg.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+.heading h1{
+    font-size: 60px;
+}
+/* .baner{
+    max-height:580 !important;
+    max-width:320;
+
+} */
