@@ -61,3 +61,11 @@ ul li{
     display: inline;
     border-bottom: 3px solid white;
 }
+.bg-circule{
+     /* width: 90%; */
+   /* height: 60vh; */
+    background-image: url('../images/circule.png');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position:center; 
+}
