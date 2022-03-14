@@ -100,3 +100,26 @@ ul li {
   transform: rotateY(0deg);
   transform-style: preserve-3d;
 }
+
+.tabs{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tab-content .main{
+  display: none;
+}
+
+.tab-content .active{
+  display: block;
+}
+.tabs .active {
+  background-color: #ffffff;
+  color: #4d5bf9;
+}
+.tabs h4{
+  background-color: #e4e9fd;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 600;
+}
