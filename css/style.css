@@ -123,3 +123,19 @@ ul li {
   cursor: pointer;
   font-weight: 600;
 }
+.bg-mbl{
+  background-image: url('../images/iPhone-Xx.png');
+  background-repeat: no-repeat;
+  width: 320px !important;
+  height: 600px !important;
+  /* background-position: center; */
+}
+.slider-imgs{
+  margin-top: 18px;
+  margin-left: 7px;
+  height: 568px;
+  padding-right: 0px;
+}
+.carousel-item{
+  transition: 1s !important;
+}
