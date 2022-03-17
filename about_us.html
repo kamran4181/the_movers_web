@@ -130,7 +130,7 @@
         </div>
     </div>
 
-    <div class="section my-4">
+    <div class="section my-4 bg-light">
         <div class="container">
             <div class="row my-4 text-center">
                 <div class="col-md-12 mt-4">
@@ -142,9 +142,9 @@
                 </div>
             </div>
             <div class="tabs">
-                <h4 class="active">Tech & Developers</h4>
-                <h4>Product & Design</h4>
-                <h4>Sales & Marketing</h4>
+                <p class="active"><b>Tech & Developers</b></p>
+                <p><b>Product & Design</b></p>
+                <p><b>Sales & Marketing</b></p>
             </div>
             <div class="tab-content my-4">
                 <div class="active main">
@@ -388,7 +388,7 @@
     </div>
 
     <script>
-        let tabs = document.querySelectorAll(".tabs h4");
+        let tabs = document.querySelectorAll(".tabs p");
         let tabContents = document.querySelectorAll(".tab-content .main");
 
         tabs.forEach((tab, index) => {

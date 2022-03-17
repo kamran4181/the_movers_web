@@ -142,36 +142,39 @@
         </div>
     </div>
     <!-- /////////end become a captain/////// -->
-
-
     <div class="section my-4">
         <div class="container mt-4">
             <div class="row">
                 <div class="col-md-12 my-4 text-center">
                     <h1>How Captain app works</h1>
                 </div>
-                <div class="col-md-5 bg-mbl my-4">
-                    <!-- <img src="/images/Mobile-1.png" alt="" class="img-fluid baner my-4" height="500" width="320"> -->
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/Home-screen.png" class="d-block slider-imgs">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Home-screen.png" class="d-block slider-imgs">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Home-screen.png" class="d-block slider-imgs">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls">
-                          </button>
-                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls">
-                          </button>
-                    </div>
+            </div>
+            <div class="row slider">
+                <!-- <div class="slider"> -->
+                <div class="col-md-5 my-4" id="img">
+                    <img src="images/Mobile.png" class="slider-imgs">
                 </div>
-                <div class="col-md-7">
-                    <div class="row">
+                <!-- </div> -->
+                <script>
+                    var images = ['images/Mobile.png', 'images/Mobile-1.png', 'images/Mobile.png'];
+                    // var images = ['images/Home-screen.png']
+                    // , 'images/slid-1.png', 'images/slide-2.png']; 
+
+                    var x = 0;
+                    var imgs = document.getElementById('img');
+                    setInterval(slider, 2000);
+                    function slider() {
+
+                        if (x < images.length) {
+                            x = x + 1;
+                        } else {
+                            x = 1;
+                        }
+                        imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+                    }
+                </script>
+                <div class="col-md-7 mt-4">
+                    <div class="row mt-3">
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-auto  m-4 py-3">
@@ -337,6 +340,25 @@
             </div>
         </div>
     </div>
+    <!-- slider -->
+    <!-- <img src="/images/Mobile-1.png" alt="" class="img-fluid baner my-4" height="500" width="320"> -->
+    <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/Home-screen.png" class="d-block slider-imgs">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Home-screen.png" class="d-block slider-imgs">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Home-screen.png" class="d-block slider-imgs">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls">
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls">
+                          </button>
+                    </div> -->
 </body>
 
 </html>
