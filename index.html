@@ -56,11 +56,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-white heading mt-4 pb-4">
-                    <h1 class="mt-4 py-4 ">Download app, Start drive, Earn money!</h1>
+                    <h1 class="mt-4 py-4 fw-bolder fs-1">Download app, Start drive, Earn money!</h1>
                     <p class="mb-4">Become a Captain and start earning</p>
                     <a href="#" class="btn btn-prim text-white rounded-pill my-3 px-4">Become Captain</a>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-6 text-center mt-4" id="pic">
+                    <!-- <img src="images/Mobile.png" class="slider-imgs"> -->
                     <img src="/images/Mobile.png" alt="" class="baner img-fluid" height="580" width="320">
                 </div>
             </div>
@@ -78,7 +79,7 @@
                     <p>Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a <br> or
                         visual presentation.</p>
                 </div>
-                <div class="col-md-4 mt-4">
+                <div class="col-md-4 mt-4 wow fadeInLeft slow">
                     <div class="card border-0" style="align-items: center;">
                         <img src="/images/icons/icon-1.png" width="45" height="37">
                         <div class="card-body">
@@ -88,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-4">
+                <div class="col-md-4 mt-4 wow fadeInDown slow">
                     <div class="card border-0" style="align-items: center;">
                         <img src="/images/icons/icon-2.png" width="45" height="37">
                         <div class="card-body">
@@ -97,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-4">
+                <div class="col-md-4 mt-4 wow fadeInRight slow">
                     <div class="card border-0" style="align-items: center;">
                         <img src="/images/icons/icon-3.png" width="40" height="30">
                         <div class="card-body">
@@ -143,28 +144,24 @@
     </div>
     <!-- /////////end become a captain/////// -->
     <div class="section my-4">
-        <div class="container mt-4">
+        <div class="container my-4 py-4 slider">
             <div class="row">
-                <div class="col-md-12 my-4 text-center">
+                <div class="col-md-12 my-4 pb-4 text-center">
                     <h1>How Captain app works</h1>
                 </div>
             </div>
-            <div class="row slider">
+            <div class="row">
                 <!-- <div class="slider"> -->
-                <div class="col-md-5 my-4" id="img">
-                    <img src="images/Mobile.png" class="slider-imgs">
+                <div class="col-md-5 my-4 text-center" id="img">
+                    <img src="images/ride-1.png" class="slider-imgs">
                 </div>
                 <!-- </div> -->
                 <script>
-                    var images = ['images/Mobile.png', 'images/Mobile-1.png', 'images/Mobile.png'];
-                    // var images = ['images/Home-screen.png']
-                    // , 'images/slid-1.png', 'images/slide-2.png']; 
-
+                    var images = ['images/ride-1.png', 'images/ride-2.png', 'images/ride-3.png', 'images/ride-4.png'];
                     var x = 0;
                     var imgs = document.getElementById('img');
                     setInterval(slider, 2000);
                     function slider() {
-
                         if (x < images.length) {
                             x = x + 1;
                         } else {
@@ -177,10 +174,10 @@
                     <div class="row mt-3">
                         <div class="col-md-12">
                             <div class="row">
-                                <div class="col-auto  m-4 py-3">
+                                <div class="col-auto  m-4 py-2">
                                     <img src="/images/icons/1.png" class="mt-2" width="50" height="50">
                                 </div>
-                                <div class="col my-4 py-3">
+                                <div class="col my-3 py-3">
                                     <p class="card-text" style="font-size: 20px;"><b>Receive Offer</b> Enter you pickup
                                         and drop-off loaction and select ride type that suits you.
                                     </p>
@@ -192,7 +189,7 @@
                                 <div class="col-auto m-4 py-3">
                                     <img src="/images/icons/2.png" class="mt-2" width="50" height="50">
                                 </div>
-                                <div class="col my-4 py-3">
+                                <div class="col my-3 py-3">
                                     <p class="card-text" style="font-size: 20px;"><b>Accept Offer</b> Enter you pickup
                                         and drop-off loaction and select ride type that suits you.
                                     </p>
@@ -204,7 +201,7 @@
                                 <div class="col-auto m-4 py-3">
                                     <img src="/images/icons/3.png" class="mt-2" width="50" height="50">
                                 </div>
-                                <div class="col my-4 py-3">
+                                <div class="col my-3 py-3">
                                     <p class="card-text" style="font-size: 20px;"><b>Start Trip</b> Enter you pickup and
                                         drop-off loaction and select ride type that suits you.
                                     </p>
@@ -216,7 +213,7 @@
                                 <div class="col-auto m-4 py-3">
                                     <img src="/images/icons/4.png" class="mt-2" width="50" height="50">
                                 </div>
-                                <div class="col my-4 py-3">
+                                <div class="col my-3 py-3">
                                     <p class="card-text" style="font-size: 20px;"><b>Collect trip fare</b> Enter you
                                         pickup and drop-off loaction and select ride type that suits you.
                                     </p>
@@ -228,7 +225,7 @@
             </div>
         </div>
     </div>
-    <div class="section" style="background-color:#CDDCE6;">
+    <div class="section slider" style="background-color:#CDDCE6;">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -340,25 +337,11 @@
             </div>
         </div>
     </div>
-    <!-- slider -->
-    <!-- <img src="/images/Mobile-1.png" alt="" class="img-fluid baner my-4" height="500" width="320"> -->
-    <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/Home-screen.png" class="d-block slider-imgs">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Home-screen.png" class="d-block slider-imgs">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Home-screen.png" class="d-block slider-imgs">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls">
-                          </button>
-                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls">
-                          </button>
-                    </div> -->
+   <script>
+       $(document).ready(function(){
+           new WOW().init();
+       });
+   </script>
 </body>
 
 </html>

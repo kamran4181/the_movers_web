@@ -83,34 +83,49 @@
                 <div class="col-md-4 mt-4">
                     <div class="row text-right">
                         <div class="col-md-4 pb-4"></div>
-                        <div class="col-md-8 bg-white" style="margin-top: 100px;padding-right: 0;">
+                        <div class="col-md-8 bg-white ride-card" style="margin-top: 100px;padding-right: 0;">
                             <span class="px-3 py-2 border rounded text-white btn-prim">1</span>
                             <p class="mt-2 mb-0"><b>Request Trip</b></p>
                             <p>Enter you pickup and drop-off loaction and select ride type that suits you.</p>
                         </div>
                         <div class="col-md-4"></div>
-                        <div class="col-md-8" style="margin-top: 190px;padding-right: 34px;">
-                            <span class="px-3 py-2 border rounded bg-white">3</span>
+                        <div class="col-md-8 ride-card" style="margin-top: 190px;padding-right: 34px;">
+                            <span class="px-3 py-2 border rounded bg-light">3</span>
                             <p class="mt-2 mb-0 bg-white"><b>Track Ride</b></p>
                             <p>You can track your ride by our real time GPS system.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-4 ml-2 text-center">
-                    <img src="/images/Mobile.png" alt="" class="baner img-fluid" height="620" width="360">
+                <div class="col-md-4 my-4 ml-2 text-center" id="img">
+                    <img src="images/slide-1.png"> 
+                    <!-- height="620" width="360"> -->
                 </div>
+                <!-- <script>
+                    var images = ['images/slide-1.png', 'images/slide-2.png', 'images/slide-3.png', 'images/slide-4.png'];
+                    var x = 0;
+                    var imgs = document.getElementById('img');
+                    setInterval(slider, 2000);
+                    function slider() {
+                        if (x < images.length) {
+                            x = x + 1;
+                        } else {
+                            x = 1;
+                        }
+                        imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+                    }
+                </script> -->
                 <div class="col-md-4 mt-4">
                     <div class="row text-left">
-                        <div class="col-md-8 pl-0 bg-white" style="margin-top: 100px">
+                        <div class="col-md-8 pl-0 bg-white ride-card" style="margin-top: 100px">
                             <span class="px-3 py-2 border rounded bg-light">2</span>
                             <p class="mt-2 mb-0"><b>Request Trip</b></p>
                             <p>Enter you pickup and drop-off loaction and select ride type that suits you.</p>
                         </div>
                         <div class="col-md-4 pb-4"></div>
-                        <div class="col-md-8" style="margin-top: 190px;padding-left: 34px;">
+                        <div class="col-md-8 ride-card" style="margin-top: 190px;padding-left: 34px;">
                             <span class="px-3 py-2 border rounded bg-light">4</span>
-                            <p class="mt-2 mb-0 bg-white"><b>Track Ride</b></p>
-                            <p>You can track your ride by our real time GPS system.</p>
+                            <p class="mt-2 mb-0 bg-white"><b>Pay and Rate</b></p>
+                            <p>Pay with cash and rate your captain.</p>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
