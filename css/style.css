@@ -52,7 +52,7 @@ header {
   /* background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url("../images/header-bg.png"); */
   background-image: url("../images/header-bg.png");
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
 }
 .heading h1 {
   font-size: 60px !important;
@@ -133,8 +133,7 @@ header {
 
 .slide-img{
  position: absolute;
-  height: 570px;
-/* width: 600px; */
+height: 570px;
  opacity: 0;
  transition: 0.5s;
 }
@@ -145,6 +144,18 @@ header {
 .section-slide{
   overflow: hidden;
 }
+.slide-imgs{
+  position: absolute !important;
+   height: 580px !important;
+  opacity: 0 !important;
+  transition: 0.5s !important;
+ }
+ .shows{
+  opacity: 1 !important;
+ }
+ .pl-40{
+   padding-left: 40px !important;
+ }
 /* /////////////////End Slide////////// */
 
 .form-width{
@@ -164,6 +175,9 @@ header {
 .s-form{
   padding: 20px !important;
 }
+.text-center-ride{
+  text-align: center;
+}
 .form-container{
   margin-top: 10px 0 !important;
 }
@@ -171,6 +185,16 @@ header {
 iframe{
   width:450px !important; 
   height:155px !important;
+}
+.about-text p{
+  font-size: 29px;
+}
+.sinup-btn{
+border: 1px solid white !important;
+}
+.sinup-btn:hover{
+ background-color: #044e82;
+ border: none !important;
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .heading h1{
@@ -237,6 +261,15 @@ iframe{
 .slide-imgr{
   margin-left: 45px !important;
 } 
+.slide2-text{
+  margin-top: 605px !important;
+}
+.text-center-ride{
+  text-align: left;
+}
+.align-items-center p{
+  font-size: 21px !important;
+}
   }
   /* ///////////////////// */
  /* .img{
