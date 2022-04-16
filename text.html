@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Portfolio</title>
+    <style>
+        
+ .zoom-in-zoom-out {
+  margin: 24px;
+  width: 50px;
+  height: 50px;
+  background: red;
+  animation: zoom-out 4s ease-out infinite;
+}
+.d-flex{
+    display: flex;
+}
+.zoom-in-zoom{
+  margin: 24px;
+  width: 50px;
+  height: 50px;
+  background: green;
+  animation: zoom-out 5s ease-out infinite;
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+    </style>
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="zoom-in-zoom-out"></div>
+        <div class="zoom-in-zoom"></div>
+    </div>
+    <script>
+    //     const logo = document.querySelectorAll('#logo path');
+
+    //  for (let i = 0; i < logo.length; i++) {
+    // console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+    //   }
+    </script>
+
+</body>
+
+</html>
