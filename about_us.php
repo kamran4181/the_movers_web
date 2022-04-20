@@ -1,0 +1,448 @@
+<?php 
+  include 'conn.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>The Movers</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- /////////LOgo///////// -->
+            <a class="navbar-brand logo d-flex" href="#">
+                <img src="images/logo.png" alt="" class="d-inline-block align-text-top">
+                <p class="brand_nm mb-0"> The Movers</p>
+            </a>
+            <!-- ///////// END LOgo///////// -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-grow: 0;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-4">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="index.php"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="ride_ui.php"><b>Rider</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="about_us.php"><b>About Us</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="contact_us.php"><b>Contact Us</b></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                            <a class="nav-link" aria-current="page" href="blog.php"><b>Blogs</b></a>
+                        </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link btn-lg btn-primary text-white rounded" aria-current="page"
+                       href="#">Become Captain</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ////End NAV/// -->
+    <?php 
+        $result = mysqli_query($con,"SELECT * FROM about_ui WHERE section_name='section-1'");
+        $row= mysqli_fetch_array($result);
+     ?>
+    <div class="section bg-light my-4">
+        <div class="container">
+            <div class="row d-flex align-items-center about-text">
+                <div class="col-md-5">
+                    <p class="fw-bolder"><?php echo $row["descrip"];?></p>
+                    <a href="#" class="btn btn-prim text-white rounded my-3 px-4 w-50">Get in touch</a>
+                </div>
+                <div class="col-md-7 text-right">
+                    <img src="images/about-img/<?php echo $row["img"];?>" alt="" class="img-fluid" width="500">
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- //////////////////// -->
+    <?php 
+     $resultt = mysqli_query($con,"SELECT * FROM about_ui WHERE section_name='section-2'");      
+    ?>
+    <div class="section my-4">
+        <div class="container p-3">
+            <div class="row">
+                <div class="col-md-12 my-4">
+                    <p><b>Why work with us</b></p>
+                </div>
+                <?php  
+			     while ($roww = mysqli_fetch_array($resultt)) { 	
+			    ?>
+                <div class="col-md-4 mb-3">
+                    <div class="card border-0 p-4 shadow-lg rounded">
+                        <!-- <button class="btn btn-outline-light">Lorem ipsum</button> -->
+                        <p class="card-title mb-0"><b><?php echo $roww["title"]; ?></b></p>
+                        <div class="card-body pl-0">
+                            <p><?php echo $roww["descrip"]; ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php }?>
+                <!-- <div class="col-md-4 mb-3">
+                    <div class="card border-0 p-4 shadow rounded bg-light">
+                        <button class="btn btn-outline-light">Lorem ipsum</button>
+                        <p class="card-title mb-0"><b>Lorem Ipsum</b></p>
+                        <div class="card-body pl-0">
+                            <p>Safety with comfort is our priority, Whether you are getting a ride to the airport,
+                                taking a client to dinner or having a loved one picked up from the hospital, and
+                                dropping to your child at school .</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card border-0 p-4 shadow-lg rounded bg-light">
+                        <button class="btn btn-outline-light">Lorem ipsum</button>
+                        <p class="card-title mb-0"><b>Lorem Ipsum</b></p>
+                        <div class="card-body pl-0">
+                            <p>Safety with comfort is our priority, Whether you are getting a ride to the airport,
+                                taking a client to dinner or having a loved one picked up from the hospital, and
+                                dropping to your child at school .</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- //////// -->
+    <?php 
+        $resulttt = mysqli_query($con,"SELECT * FROM about_ui WHERE section_name='section-3'");
+        $rowww= mysqli_fetch_array($resulttt);
+     ?>
+    <div class="section bg-light my-4 pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mt-lg-4 p-4">
+                    <img src="images/about-img/<?php echo $rowww["img"];?>" alt="" class="img-fluid" height="400" width="500">
+                </div>
+                <div class="col-md-6 mt-lg-4 p-4">
+                    <h2 class="my-4"><?php echo $rowww["title"];?></h2>
+                    <p class="my-4 fs-5">
+                        <?php echo $rowww["descrip"];?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section my-4 bg-light">
+        <div class="container">
+            <div class="row my-4 text-center">
+                <div class="col-md-12 mt-4">
+                    <h1 class="text-4">Meet Our Team</h1>
+                </div>
+                <div class="col-md-12 text-center text-20">
+                    <p>Here you will find people who are the reason behind our success and<br>
+                        who have transformed countless ideas into realities</p>
+                </div>
+            </div>
+            <div class="tabs">
+                <p class="active"><b>Tech & Developers</b></p>
+                <p><b>Product & Design</b></p>
+                <p><b>Sales & Marketing</b></p>
+            </div>
+            <div class="tab-content my-4">
+                <div class="active main">
+                    <!-- Tech & Developers -->
+                    <div class="row my-4">
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/PM.jpg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Sanwal Khan</b></h5>
+                                    <p class="card-text">Project Maneger</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Izhar.jpeg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Izhar ul Haq</b></h5>
+                                    <p class="card-text">Sr, IOS Developer</p>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Saad.jpg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Saad Shafiq</b></h5>
+                                    <p class="card-text">Senior Flutter Developer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Hamid.jpeg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Hamid</b></h5>
+                                    <p class="card-text">Flutter Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-1 my-4"></div> -->
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Adeel.jpg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Adeel Ahsraf</b></h5>
+                                    <p class="card-text">Flutter Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/team-4.jpg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title">Alina</h5>
+                                    <p class="card-text">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Omer.jpeg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Omer Ali</b></h5>
+                                    <p class="card-text">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                         
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Ali.jpeg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Ali Raza</b></h5>
+                                    <p class="card-text">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="col-md-2 my-4"></div>
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Anosh.jpeg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Anosh</b></h5>
+                                    <p class="card-text">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Kamran.jpg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Muhammad Kamran</b></h5>
+                                    <p class="card-text">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 my-4">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/Talha.jpeg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Talha Nazar</b></h5>
+                                    <p class="card-text">Web Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product & Design section-->
+                <div class="main">
+                    <div class="row">
+                        <div class="col-md-3 my-3">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="images/Team-img/shoaib.jpeg" class="card-img-top img-flude" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1"><b>Sohaib Khan</b></h5>
+                                    <p class="card-text">Sr, UI/UX Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales & Marketing section-->
+
+                <div class="main">
+                    <div class="row">
+                        <div class="col-md-3 my-3">
+                            <div class="card rounded border-0 shadow align-items-center">
+                                <img src="/images/team-7.jpg" class="card-img-top" width="280" height="280">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kainat Shakir</h5>
+                                    <p class="card-text">Sr. Digital Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="section">
+           <div class="container">
+          
+           </div>
+    </div> -->
+
+    <div class="section baner" style="overflow-x: hidden;">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/frame-2.png">
+            </div>
+            <div class="col-md-6 text-right">
+                <img src="images/frame-1.png">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ///////////////////START FOOTER////////////// -->
+    <div class="section" style="background-color:#044E82; margin-top:-1px;">
+        <div class="container text-white pt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 text-center">
+                            <a class="navbar-brand" href="#">
+                                <img src="images/logo.png" alt="">
+                                <p class="text-white"><b>The Movers</b></p>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <p class="foter-h"><b>Quick Links</b></p>
+                            <ul class="pl-0 mt-2">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white px-0 pb-2" aria-current="page" href="#">Sign
+                                        Up</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-0 py-2" aria-current="page" href="#">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-0 py-2" aria-current="page" href="#">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class=" col-sm-6 col-lg-4">
+                            <p class="foter-h"><b>Others</b></p>
+                            <ul class="pl-0 mt-2">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white px-0 py-1" aria-current="page" href="#">User
+                                        FAQs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-0 py-1" aria-current="page" href="#">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-0 py-1" aria-current="page" href="#">Legal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-0 py-1" aria-current="page" href="#">Privacy
+                                        Policy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-0 py-1" aria-current="page" href="#">Terms and
+                                        Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p class="foter-h"><b>Products</b></p>
+                            <ul class="pl-0 mt-2">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white px-0 pb-2" aria-current="page"
+                                        href="#">Send</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-0 py-2" aria-current="page" href="#">Receive</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white px-0 py-2" aria-current="page" href="#">Buy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-10 p-4">
+                            <p>Subscribe to our newsletter and be the first to know about our updates</p>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light bg-white text-dark" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" style="background-color:#044E82; margin-top:-1px;">
+        <div style="border-top: 2px solid white;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 pt-2">
+                        <p class="text-white m-2">Copyright © 2020. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-right pt-2">
+                        <a href="https://www.youtube.com/channel/UCGg1sH2Mp_QgLrmRc6j8ThQ" target="_blanck"><img src="images/icons/Youtube.png" class="m-3 social-icone"></a>
+                        <a href="https://www.instagram.com/themoverscab" target="_blanck"><img src="images/icons/Instagram.png" class="m-3 social-icone"></a>
+                        <a href="https://www.facebook.com/themoverscab" target="_blanck"><img src="images/icons/Facebook.png" class="m-3 social-icone"></a>
+                        <a href="#"><img src="images/icons/Twitter.png" class="m-3 social-icone"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let tabs = document.querySelectorAll(".tabs p");
+        let tabContents = document.querySelectorAll(".tab-content .main");
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                tabContents.forEach((content) => {
+                    content.classList.remove("active");
+                });
+                tabs.forEach((tab) => {
+                    tab.classList.remove("active");
+                });
+                tabContents[index].classList.add("active");
+                tabs[index].classList.add("active");
+            });
+        });
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+</body>
+
+</html>
